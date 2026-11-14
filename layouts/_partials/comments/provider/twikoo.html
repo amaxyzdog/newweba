@@ -1,4 +1,4 @@
-<script src="//cdn.jsdelivr.net/npm/twikoo@2.0.17/dist/twikoo.all.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
 <div id="tcomment"></div>
 <style>
     .twikoo {
@@ -40,66 +40,6 @@
         background-color: var(--body-background) !important;
         color: var(--body-text-color) !important;
     }
-    /* 基础信息说明（昵称/邮箱等标签） */
-    .twikoo .tk-input--small .tk-input-group__prepend,
-    .twikoo .tk-input--small .tk-input-group__append { font-size: 14px; }
-    /* 基础信息输入框内容 */
-    .twikoo .tk-input--small .tk-input__inner { font-size: 14px; }
-    /* 评论内容输入框 */
-    .twikoo .tk-input__inner { font-size: 14px; }
-    /* 按钮文字 */
-    .twikoo .tk-button--small { font-size: 14px; }
-    /* 排序标签（最新/最热等） */
-    .twikoo .tk-sort-item { font-size: 12px; }
-    .twikoo .tk-icon.__comments { width: 12px; height: 12px; }
-    /* 后台管理相关按钮 */
-    .twikoo .tk-button--mini { font-size: 16px; }
-    /* 字数提示 */
-    .twikoo .tk-input__count { font-size: 10px; position: absolute; bottom: 3px; }
-    /* 主评论者头像尺寸 */
-    .twikoo .tk-avatar { width: 30px; height: 30px; }
-    /* 子评论头像尺寸 */
-    .twikoo .tk-comment .tk-submit .tk-avatar,
-    .twikoo .tk-replies .tk-avatar { width: 25px; height: 25px; }
-    .twikoo .tk-comment .tk-submit .tk-avatar .tk-avatar-img,
-    .twikoo .tk-replies .tk-avatar .tk-avatar-img { height: 25px; line-height: 25px; }
-/* ============================================ */
-/* Twikoo 暗色模式文字颜色优化                     */
-/* 强制按钮、标签、输入框内文字为白色，提升可读性      */
-/* ============================================ */
-[data-scheme="dark"] {
-  /* 1. 按钮文字 —— “发送”等操作按钮 */
-  .twikoo .tk-button,
-  .twikoo .tk-button--small,
-  .twikoo .tk-button--mini {
-    color: #fff !important;
-  }
-
-  /* 2. 输入框提示标签文字 —— “昵称”“邮箱”“网址”等 */
-  .twikoo .tk-input-group__prepend,
-  .twikoo .tk-input-group__append {
-    color: #fff !important;
-  }
-
-  /* 3. 输入框内用户输入的文字 —— 实际输入内容 */
-  .twikoo .tk-input__inner,
-  .twikoo textarea.tk-input {
-    color: #fff !important;
-  }
-
-  /* 4. 补充：评论内容本身也统一为白色，保持整体一致 */
-  .twikoo .tk-comment .tk-content,
-  .twikoo .tk-comment .tk-nick,
-  .twikoo .tk-comment .tk-time {
-    color: #fff !important;
-  }
-
-  /* 5. 排序标签与计数文字（可选，一并调白） */
-  .twikoo .tk-sort-item,
-  .twikoo .tk-input__count {
-    color: #fff !important;
-  }
-}
 </style>
 
 {{- with .Site.Params.comments.twikoo -}}
