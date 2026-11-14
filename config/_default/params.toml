@@ -52,9 +52,8 @@ SortBy              = "default"
     enabled  = true
     provider = "twikoo"
 
-    [comments.twikoo]
+[comments.twikoo]
     envId = "https://xifen.dpdns.org/.netlify/functions/twikoo"
-    js_url = "https://cdn.jsdelivr.net/npm/twikoo@2.0.17/dist/twikoo.all.min.js"
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
     # Copy the configurations you need from there and paste it here.
