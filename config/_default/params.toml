@@ -18,8 +18,8 @@ SortBy              = "default"
     lastUpdated = ":date_full"
 
 [sidebar]
-    emoji    = "🍥"
-    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    emoji    = ""
+    subtitle = "喜欢折腾些好玩的东西"
     avatar   = "img/avatar.png"
 
 [article]
@@ -29,14 +29,13 @@ SortBy              = "default"
 
     [article.license]
         enabled = true
-        default = "Licensed under CC BY-NC-SA 4.0"
+        default = "本站所有文章除特别声明外，均采用 CC BY-NC-SA 许可协议。"
 
 [widgets]
     homepage = [
         { type = "search" },
         { type = "archives", params = { limit = 5 } },
         { type = "categories", params = { limit = 10 } },
-        { type = "tag-cloud", params = { limit = 10 } },
     ]
     page = [{ type = "toc" }]
 
@@ -51,7 +50,11 @@ SortBy              = "default"
 ## Comments
 [comments]
     enabled  = true
-    provider = "disqus"
+    provider = "twikoo"
+
+    [comments.twikoo]
+    envId = "https://xifen.dpdns.org/.netlify/functions/twikoo"
+    js_url = "https://cdn.jsdelivr.net/npm/twikoo@2.0.17/dist/twikoo.all.min.js"
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
     # Copy the configurations you need from there and paste it here.
