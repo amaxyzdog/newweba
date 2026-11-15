@@ -1,40 +1,61 @@
 ---
-title: Math Typesetting
-description: Math typesetting using KaTeX
-date: 2023-08-24 00:00:00+0000
+title: 数学公式
+date: 2026-11-15
+description: 在 Stack 主题中启用和使用 KaTeX 的指南
 math: true
+categories:
+    - 主题相关
+slug: math-typesetting
 ---
 
-Stack has built-in support for math typesetting using [KaTeX](https://katex.org/).
+Stack 主题支持使用 [KaTeX](https://katex.org/) 渲染数学公式。
 
-**It's not enabled by default side-wide,** but you can enable it for individual posts by adding `math: true` to the front matter. Or you can enable it side-wide by adding `math = true` to the `params.article` section in `config.toml`.
+<!--more-->
 
-## Inline math
+## 启用 KaTeX
 
-This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
+### 按页面启用
 
-```markdown
-$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
+要在特定文章中启用 KaTeX，请在文章的前置参数（frontmatter）中包含 `math: true`：
+
+```yaml
+---
+title: "我的数学文章"
+math: true
+---
 ```
 
-## Block math
+### 全局启用
 
-$$
-    \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
+要为所有文章启用 KaTeX，请在网站配置（`params.yaml` 或 `params.toml`）中将 `article.math` 设置为 `true`：
 
-```markdown
-$$
-    \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
+```yaml
+article:
+    math: true
 ```
 
+## 示例
+
+### 行内公式
+
+你可以通过将表达式包裹在单个美元符号 `$` 中来包含行内公式。
+
+例如：`$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $` 将渲染为 $ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $
+
+### 块级公式
+
+对于较大的方程式，请使用双美元符号 `$$` 创建数学块。
+
 $$
-    f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$
 
-```markdown
+### 更复杂的公式
+
 $$
-    f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+f(a) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z-a} dz
 $$
-```
+
+---
+
+**注意：** 有关受支持的 TeX 函数的完整列表，请参阅 [KaTeX 文档](https://katex.org/docs/supported.html)。
