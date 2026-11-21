@@ -53,7 +53,7 @@ SortBy              = "default"
     provider = "twikoo"
 
 [comments.twikoo]
-    envId = "https://xifen.dpdns.org/.netlify/functions/twikoo"
+    envId = "https://twikoo-talk-j4s.netlify.app/.netlify/functions/twikoo"
 
     # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
     # Copy the configurations you need from there and paste it here.
